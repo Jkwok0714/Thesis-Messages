@@ -26,7 +26,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
 
 Messages expects message objects from a user.
 
-A user is not expected because by the time messages are being exchanged, there is already a swipe match between the two users.
+A match queue is not expected because by the time messages are being exchanged, there is already a swipe match between the two users.
 
 The idea is to examine the messages and put the quality of interaction on a quantifiable scale.
 
@@ -87,7 +87,7 @@ Messages outputs analytics on the messages from a user to a user
 - `avgResponseTime` Average time user takes to respond to a message
 - `avgResponseLength` Average length of the responses sent by user
 - `dateArranged` Array of users where a date was likely arranged (e.g. personal contact info was provided)
-- `userActivity` Number of messages sent in the amount of time queried
+- `userActivity` Number of messages sent in the time period queried
 
 ## Requirements
 
@@ -98,6 +98,7 @@ Messages outputs analytics on the messages from a user to a user
 - socket.io
 - chai
 - mocha
+- faker
 
 ## Development
 ### Installing Dependencies
@@ -118,6 +119,8 @@ Shorter | Response Length | Longer
 
 #### Schema
 
+![alt text](https://github.com/Jkwok0714/Thesis-Messages/blob/master/resources/schema.png "Schema 1")
+
 #### Simulation
 
 Traits for users are generated based on seed (user name) as to remain consistent throughout interactions with other users
@@ -132,6 +135,11 @@ Traits for users are generated based on seed (user name) as to remain consistent
     - If user is interested, and match score between the two high enough, a date is arranged
 5. Session ends
 
+#### Movement of Data in System
+
+- AWS SQS message buses
+- Component expects user information from the Inventory Services
+- Component expects message quality requests from Analysis and Matchmaking
 
 ## Other Information
 
