@@ -1,0 +1,28 @@
+{
+  "name": "thesis-part",
+  "version": "1.0.0",
+  "description": "Messages service of Tinder App",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jkwok0714/Thesis-Messages.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jkwok0714/Thesis-Messages/issues"
+  },
+  "homepage": "https://github.com/Jkwok0714/Thesis-Messages#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "pg": "^7.3.0",
+    "socket.io": "^2.0.3"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  }
+}
